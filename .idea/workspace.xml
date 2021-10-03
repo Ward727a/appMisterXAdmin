@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="18c7b5cd-2a3f-49e1-8d2a-2eac0a78a2a1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1y65bi49o7ZCKc9OfrDlTBUKpSH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="14" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="F:\IntelliJ IDEA 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Dev\Web\MisterXPanelAppAdmin\include" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dev\Web\MisterXPanelAppAdmin\Script" />
+      <recent name="G:\Dev\Web\MisterXPanelAppAdmin\build" />
+      <recent name="G:\Dev\Web\MisterXPanelAppAdmin\Script\model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18c7b5cd-2a3f-49e1-8d2a-2eac0a78a2a1" name="Default Changelist" comment="" />
+      <created>1631559283366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631559283366</updated>
+      <workItem from="1631559286132" duration="178000" />
+      <workItem from="1631559499663" duration="1762000" />
+      <workItem from="1631715963293" duration="615000" />
+      <workItem from="1631965728011" duration="15518000" />
+      <workItem from="1631984577471" duration="87000" />
+      <workItem from="1631987778906" duration="771000" />
+      <workItem from="1631988802880" duration="332000" />
+      <workItem from="1631989302680" duration="3530000" />
+      <workItem from="1632045411534" duration="4634000" />
+      <workItem from="1632058319704" duration="13366000" />
+      <workItem from="1632079359088" duration="205000" />
+      <workItem from="1632163855208" duration="3134000" />
+      <workItem from="1632249282579" duration="2272000" />
+      <workItem from="1632251719909" duration="2265000" />
+      <workItem from="1632254385484" duration="275000" />
+      <workItem from="1632317449685" duration="2913000" />
+      <workItem from="1632322021199" duration="423000" />
+      <workItem from="1632323432797" duration="707000" />
+      <workItem from="1632324660341" duration="10707000" />
+      <workItem from="1632504098900" duration="2319000" />
+      <workItem from="1632512613574" duration="163000" />
+      <workItem from="1632512997595" duration="1682000" />
+      <workItem from="1632570120509" duration="4906000" />
+      <workItem from="1632575730843" duration="2266000" />
+      <workItem from="1632578109974" duration="40000" />
+      <workItem from="1632578703488" duration="9638000" />
+      <workItem from="1632590889215" duration="81000" />
+      <workItem from="1632590976331" duration="2000" />
+      <workItem from="1632591447493" duration="3043000" />
+      <workItem from="1632599061532" duration="932000" />
+      <workItem from="1632655585977" duration="687000" />
+      <workItem from="1632656405696" duration="1419000" />
+      <workItem from="1632657926936" duration="3401000" />
+      <workItem from="1632661476061" duration="1366000" />
+      <workItem from="1632663108163" duration="6183000" />
+      <workItem from="1632669464561" duration="4094000" />
+      <workItem from="1632673768189" duration="394000" />
+      <workItem from="1632674325565" duration="464000" />
+      <workItem from="1632675276128" duration="661000" />
+      <workItem from="1632939086301" duration="972000" />
+      <workItem from="1633207903920" duration="1757000" />
+      <workItem from="1633211172739" duration="17000" />
+      <workItem from="1633211384798" duration="3391000" />
+      <workItem from="1633265945533" duration="6293000" />
+      <workItem from="1633274552935" duration="55000" />
+      <workItem from="1633275423252" duration="388000" />
+      <workItem from="1633275990840" duration="88000" />
+      <workItem from="1633276168262" duration="7000" />
+      <workItem from="1633276194921" duration="1061000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="218" key="#Inspections" timestamp="1632326826463">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="586" y="218" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1632326826463" />
+    <state x="440" y="114" key="#Project_Structure" timestamp="1631559340459">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="440" y="114" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1631559340459" />
+    <state x="627" y="317" width="666" height="659" key="EditFileWatcherDialog" timestamp="1632319005237">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="627" y="317" width="666" height="659" key="EditFileWatcherDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1632319005237" />
+    <state x="739" y="281" key="FileChooserDialogImpl" timestamp="1632673639561">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="739" y="281" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1632673639561" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1632319006783">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1632319006783" />
+    <state x="668" y="257" width="583" height="624" key="find.popup" timestamp="1632673900459">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="668" y="257" width="583" height="624" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1632673900459" />
+    <state x="343" y="114" key="new project wizard" timestamp="1631716587750">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="343" y="114" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1631716587750" />
+    <state x="785" y="289" key="refactoring.ChangeSignatureDialog" timestamp="1632667462969">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="785" y="289" key="refactoring.ChangeSignatureDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1632667462969" />
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup" timestamp="1633270904045">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1633270904045" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1632658961308">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1632658961308" />
+  </component>
+</project>

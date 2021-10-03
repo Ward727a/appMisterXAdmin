@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MisterX - ADMIN</title>
+    <link rel="stylesheet" href="style/question.css"/>
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/modal.css">
+
+    <script>
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+    <script src="Script/ckeditor.js"></script>
+    <link rel="stylesheet" href="style/customCKEDITOR.css">
+
+    <script type="text/javascript" src="Script/require.js"></script>
+
+    <script src="style/fontawesome/js/all.min.js" crossorigin="anonymous"></script>
+
+    <script src="Script/general.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<div include-html="include/menu.html"></div>
+
+<div id="containerBody">
+
+    <div class="rowHead">
+
+        <h3>Question</h3>
+
+    </div>
+
+    <div class="rowCat">
+
+        <div class="row catHead">
+
+            <h4>Création d'une question</h4>
+
+        </div>
+
+        <div class="col catBody">
+            <div class="row">
+
+                <label for="questionTitleInput">Titre de la question : </label>
+                <input id="questionTitleInput" type="text"/>
+
+            </div>
+            <div class="rowSpace"></div>
+            <div id="questionInput" class="notInStyle" contenteditable="true">
+            </div>
+            <div class="rowSpace"></div>
+            <div class="row">
+                <label for="questionResponseInput">La réponse à cette question : </label>
+                <input id="questionResponseInput" type="text"/>
+            </div>
+            <div class="rowSpace"></div>
+            <div class="row">
+                <label for="questionCounterInput">Message en cas d'erreur : </label>
+                <input id="questionCounterInput" type="text"/>
+            </div>
+            <div class="rowSpace"></div>
+            <div class="row">
+            <label for="quizSelector">Créé la question dans le quiz : </label>
+            <select id="quizSelector">
+            </select>
+            </div>
+            <div class="rowSpace"></div>
+
+            <div class="row">
+                <p>Liste de question dans le quiz : <span id="quizNumber">ERROR UNDEFINED</span> </p>
+            </div>
+                <div class="row">
+                    <p>Le quiz est actif : <span id="quizValid"><span class="info">ERROR UNDEFINED</span></span> </p>
+            </div>
+            <div class="rowSpace"></div>
+            <button id="createQuestion" onclick="createQuestion()">
+
+                Créé la question
+
+            </button>
+
+        </div>
+    </div>
+
+    <div class="rowSpace"></div>
+
+    <div class="rowCat">
+
+        <div class="catHead row">
+
+            <h3>Liste des questions : </h3>
+            <div class="alignRight">
+                <label for="quizSelectorSearch">Pour le quiz : </label>
+                <select id="quizSelectorSearch">
+                    <option value="default">Aucun</option>
+                </select>
+                <div class="rowSpace"></div>
+            <button class="info" onclick="listQuestion()">Rafraichir la liste</button>
+            </div>
+        </div>
+        <div class="catBody" id="questionList">
+
+
+
+        </div>
+
+    </div>
+    <div class="rowSpace"></div>
+
+</div>
+
+<div id="questionDetailsContainerBack">
+
+    <div id="questionDetailsContainer">
+
+        <p class="info">Seul les textes soulignés en bleu, peuvent être modifier.<br/>Cliquer sur les données pour les modifiers.</p>
+        <div class="rowSpace"></div>
+        <p>Titre de la question : <span id="questionDetailsTitle" class="data cursor">[title]</span><input type="text" id="questionDetailsTitleEdit"/> </p>
+        <div class="rowSpace"></div>
+        <p>La question :</p>
+        <div id="questionDetailsInput"></div>
+        <div class="rowSpace"></div>
+        <p>Identifiants unique de la question : <span id="questionDetailsUID">[UID]</span></p>
+        <div class="rowSpace"></div>
+        <p>Réponse à la question : <span id="questionDetailsResponse" class="data cursor">[response]</span><input type="text" id="questionDetailsResponseEdit"/> </p>
+        <div class="rowSpace"></div>
+        <p>Réponse en cas d'erreur : <span id="questionDetailsCounter" class="data cursor">[counter]</span><input type="text" id="questionDetailsCounterEdit"/> </p>
+        <div class="rowSpace"></div>
+        <p>Dans le quiz : <select id="questionDetailsQuiz"></select></p>
+        <div class="rowSpace"></div>
+        <p>Ordre de la question : <input type="number" id="questionDetailsOrder"/></p>
+        <div class="rowSpace"></div>
+
+        <button id="acceptParam" class="unactive">Enregistrer</button>
+        <div class="rowSpace"></div>
+        <button id="deleteQuestion" class="warning"><i class="far fa-exclamation-circle fa-lg"></i> Supprimer la question</button>
+    </div>
+
+</div>
+
+<div include-html="include/loading.html"></div>
+
+<div include-html="include/modal.html"></div>
+
+<template id="templateContainerQuestion" include-html="include/templateContainerQuestion.html"></template>
+
+<script src="Script/menu.js"></script>
+
+<script>
+    includeHTML();
+
+    let editor = ClassicEditor.create(document.querySelector("#questionInput"), {
+        toolbar: [ 'bold', 'italic'],
+        placeholder: "Tapez votre question ici"})
+        .then(editor=>{
+            console.log(editor);
+        }).catch(err=>{console.error(err)});
+
+
+
+</script>
+<script src="Script/question.js"></script>
+
+<script src="Script/detailsQuestion.js"></script>
+<div include-html="include/statusBot.html"></div>
+<script src="Script/bot.js"></script>
+
+</body>
+</html>

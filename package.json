@@ -1,0 +1,32 @@
+{
+  "name": "misterx-panel",
+  "version": "1.0.0",
+  "description": "Logiciel de gestion du bot MisterX",
+  "main": "Script/main.js",
+  "author": "VEREECQUE Malywan",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Ward727a/appMisterXAdmin.git"
+  },
+  "devDependencies": {
+    "electron": "^14.0.0",
+    "electron-builder": "^22.11.7"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "build": {
+    "appId": "misterx.app"
+  },
+  "dependencies": {
+    "electron-store": "^8.0.1",
+    "electron-updater": "^4.3.9",
+    "socket.io-client": "^4.2.0",
+    "tippy.js": "^6.3.2"
+  }
+}

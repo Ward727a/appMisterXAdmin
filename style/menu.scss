@@ -1,0 +1,41 @@
+@use "base";
+
+#menuBTN{
+  height: 25px;
+  z-index: 2;
+  display: block;
+  position: fixed;
+  background-color: #2e2e2e;
+  box-shadow: #242424 2px 2px 8px;
+  cursor: pointer;
+  border-bottom: solid 1px base.$baseColor;
+  border-top: solid 1px base.$baseColor;
+  text-align: center;
+  width: 100%;
+}
+#containerMenu{
+  z-index: 5;
+  position: fixed;
+  align-items: center;
+  left: -100vw;
+  width: 100%;
+  transition: ease-in-out .2s;
+  #menuList{
+    display: flex;
+    background-color: #242424;
+    width: 100%;
+
+    .closeContainer{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      button{
+        width: 2.5vw;
+      }
+    }
+  }
+  button{
+    margin: 5px 10px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/modal.css">
+
+    <script>
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+
+    <script type="text/javascript" src="Script/require.js"></script>
+
+    <!-- Font Awesome integration -->
+    <script src="style/fontawesome/js/all.min.js" crossorigin="anonymous"></script>
+
+    <script src="Script/general.js" crossorigin="anonymous"></script>
+
+    <title>MisterX - ADMIN</title>
+</head>
+<body>
+
+<div include-html="include/menu.html"></div>
+
+<div id="containerBody">
+
+    <div class="rowHead">
+        <h3>Comptes</h3>
+    </div>
+    <div class="rowCat">
+
+        <div class="row catHead">
+            <h4>Création de compte</h4>
+        </div>
+        <div class="catBody">
+            <div class="row">
+
+
+                <label for="newAccountName">Nom du nouveau compte : </label>
+                <input id="newAccountName" type="text">
+            </div>
+            <div class="rowSpace"></div>
+            <div class="row">
+                <p class="warning">Le mot de passe sera défini lors de la première connexion au compte.<br/>Si le mot de passe n'est pas demandé, alors réinitialiser le dans la liste des utilisateurs.</p>
+            </div>
+            <div class="rowSpace"></div>
+            <div class="row">
+                <button onclick="createAccount()" id="createAccountBTN" class="">Créé le compte</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="rowSpace"></div>
+
+    <div class="rowCat">
+
+        <div class="row catHead">
+            <h4>Listes des utilisateurs</h4>
+            <div class="alignRight">
+            <button class="info" onclick="refreshUserList()">Rafraichir la liste</button>
+            </div>
+        </div>
+
+        <div class="catBody" id="userList">
+        </div>
+
+    </div>
+    <div class="rowSpace"></div>
+
+</div>
+
+<div id="accountDetailsContainerBack">
+
+    <div id="accountDetailsContainer">
+
+        <p class="info">Seul les textes soulignés en bleu, peuvent être modifier.<br/>Cliquer sur les données pour les modifiers.</p>
+        <div class="rowSpace"></div>
+        <p>Pseudo de l'utilisateur : <span id="accountDetailsPseudo" class="data cursor">[pseudo]</span><input type="text" id="accountDetailsPseudoEdit"/> </p>
+        <div class="rowSpace"></div>
+        <p>Identifiants unique de l'utilisateur : <span id="accountDetailsUID">[UID]</span></p>
+        <div class="rowSpace"></div>
+        <p>Mot de passe du compte : <span id="accountDetailsPassword">[Password]</span></p>
+        <div class="rowSpace"></div>
+        <p>Le compte est activé : <span id="accountDetailsValid">[Valid]</span></p>
+        <div class="rowSpace"></div>
+
+        <button id="acceptParam" class="unactive">Enregistrer</button>
+        <div class="rowSpace"></div>
+        <button id="activateAccount" class="valid">Activer le compte</button>
+        <button id="stopAccount" class="warning">Désactiver le compte</button>
+        <div class="rowSeparator"></div>
+        <button id="resetPassword" class="warning">Réinitialiser le mot de passe</button>
+        <div class="rowSpace"></div>
+        <button id="deleteAccount" class="warning"><i class="far fa-exclamation-circle fa-lg"></i> Supprimer le compte</button>
+    </div>
+
+</div>
+
+<div include-html="include/loading.html"></div>
+
+<template include-html="include/containerUserTemplate.html" id="templateContainerUser"></template>
+
+<div include-html="include/modal.html"></div>
+
+<div include-html="include/statusBot.html"></div>
+<script src="Script/bot.js"></script>
+
+<div id="notification" class="hidden">
+    <p id="message"></p>
+    <button id="close-button" onClick="closeNotification()">
+        Close
+    </button>
+    <button id="restart-button" onClick="restartApp()" class="hidden">
+        Restart
+    </button>
+</div>
+
+<script src="Script/index.js"></script>
+<script src="Script/menu.js"></script>
+
+
+<script>
+    includeHTML();
+</script>
+
+</body>
+</html>

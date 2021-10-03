@@ -1,0 +1,130 @@
+@use "base.scss";
+
+
+#statusBotContainer{
+
+    display: grid;
+    position: fixed;
+    bottom: -765px;
+    left: -304px;
+    background-color: #474747;
+    width: 500px;
+    height: 800px;
+    border-top-right-radius: 5px;
+    grid-template-columns: [first] 304px [second] 196px;
+    grid-template-rows: [first] 35px [second] 765px;
+    border-top: solid 4px base.$colorBorder;
+    border-right: solid 4px base.$colorBorder;
+    #topRightStatusBot{
+        grid-row: 1;
+        grid-column: 2;
+        display: grid;
+
+        grid-template-columns: [first] 140px [second] 36px [third] 20px;
+        grid-template-rows: 35px;
+        justify-items: center;
+        align-items: center;
+        background-color: darken(#474747, 4%);
+        border-bottom-left-radius: 5px;
+    }
+    #expandBotButton{
+        color: #eeeeee;
+    }
+
+    #bodyStatusBot{
+        grid-row: 2;
+    }
+
+    #roundStatus{
+
+        grid-column: 2;
+        border-radius: 20px;
+        width: 15px;
+        height: 15px;
+
+
+        &.warning{
+
+            background-color: base.$warningColor;
+            animation: fadeWarning 1s infinite;
+        }
+
+        &.success{
+
+            background-color: base.$validColor;
+            animation: fadeSuccess 1s infinite;
+        }
+
+        &.loading{
+
+            background-color: base.$infoColor;
+            animation: fadeLoading 1s infinite;
+
+        }
+
+    }
+    transition: bottom .2s ease-in-out, left .2s ease-in-out;
+
+    &.opened{
+        transition: bottom .5s ease-in-out, left .5s ease-in-out;
+        bottom: 0;
+        left: 0;
+    }
+    #statusBotCompressIcon{
+        transition: all .5s ease-in-out;
+        display: none;
+    }
+}
+
+@keyframes fadeLoading {
+    
+    from{
+        background-color: base.$infoColor;
+    }
+    50%{
+        background-color: darken(base.$infoColor, $amount: 15%)
+    }
+    to{
+        background-color: base.$infoColor;
+    }
+
+}
+@keyframes fadeSuccess {
+    
+    from{
+        background-color: base.$validColor;
+    }
+    50%{
+        background-color: darken(base.$validColor, $amount: 15%)
+    }
+    to{
+        background-color: base.$validColor;
+    }
+
+}
+@keyframes fadeWarning {
+    
+    from{
+        background-color: base.$warningColor;
+    }
+    50%{
+        background-color: darken(base.$warningColor, $amount: 15%)
+    }
+    to{
+        background-color: base.$warningColor;
+    }
+
+}
+
+@keyframes expandHover {
+
+    from{
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    100%{
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+}

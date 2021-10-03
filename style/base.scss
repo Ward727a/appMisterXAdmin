@@ -1,0 +1,216 @@
+@use "loader";
+
+
+$infoColor: #e0c049;
+$infoDarken: darken(#e0c049, 15%);
+
+$validColor: #6eba69;
+$validDarken: darken(#6eba69, 20%);
+
+$warningColor: #d96363;
+$warningDarken: darken(#d96363, 20%);
+
+$baseColor: #69a3ba;
+$baseDarken: darken(#69a3ba, 20%);
+
+$nonActiveColor: #a1aaae;
+$nonActiveColorDarken: darken(#a1aaae, 20%);
+
+$colorBorder: mix(black, #474747, 10%);
+
+  html, body{
+    padding: 0;
+    margin: 0;
+    background-color: mix(black, #474747, 50%);
+  }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+p, label{
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    margin: 4px;
+    padding: 0;
+    color: white;
+}
+p, span{
+
+  &[class*="info"]{
+    color: $infoColor;
+  }
+  &[class*="warning"]{
+    color: $warningColor;
+  }
+  &[class*="valid"]{
+    color: $validColor;
+  }
+
+  &[class*="data"]{
+    text-decoration: underline $baseColor;
+    text-underline-offset: 3px;
+  }
+}
+
+*[class*="cursor"]{
+  cursor: pointer;
+}
+
+#containerLoadingScreen{
+  z-index: 999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46,46,46,0.8);
+  display: none;
+  .textLoadingScreenContainer{
+    position: absolute;
+    top: 49%;
+    width: 100%;
+  }
+  #messageLoadingScreen{
+    text-align: center;
+  }
+}
+
+input[type="text"], input[type="password"], input[type="number"], select{
+
+  background-color: #2e2e2e;
+  outline: none;
+  color: white;
+  padding: 5px 2px;
+
+  border: solid 1px $baseColor;
+  border-radius: 5px;
+}
+button{
+  background-color: #2e2e2e;
+  outline: none;
+  color: $baseColor;
+  padding: 5px 10px;
+
+  border: solid 1px $baseColor;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &:active{
+    color: $baseDarken;
+    border-color: $baseDarken;
+  }
+
+
+  &[class*="valid"]{
+
+    color: $validColor;
+    border: solid 1px $validColor;
+
+    &:active{
+      color: $validDarken;
+      border-color: $validDarken;
+    }
+
+  }
+
+  &[class*="warning"]{
+
+    color: $warningColor;
+    border: solid 1px $warningColor;
+
+    &:active{
+      color: $warningDarken;
+      border-color: $warningDarken;
+    }
+
+  }
+
+  &[class*="info"]{
+
+    color: $infoColor;
+    border: solid 1px $infoColor;
+
+    &:active{
+      color: $infoDarken;
+      border-color: $infoDarken;
+    }
+
+  }
+
+  &[class*="unactive"]{
+
+    background-color: mix(#2e2e2e, $nonActiveColorDarken, 75%);
+    cursor: not-allowed;
+
+    color: $nonActiveColor;
+    border: solid 1px $nonActiveColor;
+
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.rowSpace{
+  margin: 10px;
+}
+.rowHead{
+  margin-top: 25px;
+  text-align: center;
+  background-color: mix(black, #474747, 35%);
+  &:not(:first-child){
+    border-top: solid $colorBorder;
+    margin: 20px 0;
+    padding: 20px;
+    border-bottom: solid $colorBorder;
+  }
+  &:first-child{
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: solid $colorBorder;
+  }
+}
+.rowCat{
+  display: flex;
+  flex-direction: column;
+  background-color: $colorBorder;
+  margin: 0 10px;
+  border-radius: 5px;
+
+  .catHead{
+    margin: 5px  5px 5px 20px;
+    align-items: center;
+  }
+  .catBody {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: lighten($colorBorder, 5%);
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 3px;
+  }
+}
+
+.alignRight{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+
+.deleteButtonContainer{
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out .15s;
+
+}

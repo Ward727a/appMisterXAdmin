@@ -1,0 +1,136 @@
+<!--suppress HtmlFormInputWithoutLabel -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MisterX - ADMIN</title>
+
+    <link rel="stylesheet" href="style/quiz.css"/>
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/modal.css">
+
+    <script>
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+    </script>
+
+    <script type="text/javascript" src="Script/require.js"></script>
+    <!-- Font Awesome integration -->
+    <script src="style/fontawesome/js/all.min.js" crossorigin="anonymous"></script>
+
+    <script src="Script/general.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<div include-html="include/menu.html"></div>
+
+<div id="containerBody">
+
+    <div class="rowHead">
+
+        <h3>Quiz</h3>
+
+    </div>
+
+    <div class="rowCat">
+
+        <div class="row catHead">
+
+            <h4>Création d'un quiz</h4>
+
+        </div>
+
+        <div class="row catBody">
+
+            <div class="row">
+                <label for="newQuizName">Titre du nouveau quiz :</label>
+                <input type="text" id="newQuizName"/>
+            </div>
+
+            <div class="rowSpace"></div>
+
+            <div class="row">
+
+                <button onclick="createQuiz()" id="createQuizBTN">Créé le quiz</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rowSpace"></div>
+    <div class="rowCat">
+
+        <div class="row catHead">
+
+            <h4>Liste des quiz</h4>
+
+            <div class="alignRight">
+
+                <button class="info" onclick="refreshQuiz()">Rafraichir la liste</button>
+
+            </div>
+
+        </div>
+        <div class="catBody" id="quizList">
+
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<div id="quizDetailsContainerBack">
+
+    <div id="quizDetailsContainer">
+
+        <p class="info">Seul les textes soulignés en bleu, peuvent être modifier.<br/>Cliquez sur les données pour les modifiers.</p>
+
+        <div class="rowSpace"></div>
+        <p>Titre du quiz : <span id="quizDetailsTitle" class="data cursor">[title]</span>
+            <input type="text" id="quizDetailsTitleEdit"/></p>
+        <div class="rowSpace"></div>
+        <p>Identifiants unique du quiz : <span id="quizDetailsUID">[UID]</span></p>
+        <div class="rowSpace"></div>
+        <p>Création par : <span id="quizDetailsAuthor">[AUTHOR]</span></p>
+        <div class="rowSpace"></div>
+        <p>Le quiz est actif : <span id="quizDetailsValid">[valid]</span></p>
+        <div class="rowSpace"></div>
+        <div class="rowSpace"></div>
+        <p>Nombre(s) de question(s) dans le quiz : <span id="quizDetailsNumber">[number]</span></p>
+        <div class="rowSpace"></div>
+
+        <button id="acceptParam" class="unactive">Enregistrer</button>
+        <div class="rowSpace"></div>
+        <button id="activateQuiz" class="valid">Activer le quiz</button>
+        <button id="stopQuiz" class="warning">Désactiver le quiz</button>
+        <div class="rowSeparator"></div>
+        <button id="deleteQuiz" class="warning"><i class="far fa-exclamation-circle fa-lg"></i> Supprimer le quiz</button>
+    </div>
+
+</div>
+
+<div include-html="include/loading.html"></div>
+
+<div include-html="include/modal.html"></div>
+
+<template id="templateContainerQuiz" include-html="include/templateContainerQuiz.html"></template>
+
+<script src="Script/menu.js"></script>
+<script src="Script/quiz.js"></script>
+
+<div include-html="include/statusBot.html"></div>
+<script src="Script/bot.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>
