@@ -34,19 +34,29 @@ const notification = document.getElementById('notification');
 const message = document.getElementById('message');
 const restartButton = document.getElementById('restart-button');
 window.api.receiveOnce('update_available', () => {
-    message.innerText = 'A new update is available. Downloading now...';
+
+    console.log("update_available");
+
+    message.innerText = 'Une mise à jour est disponible. Téléchargement en cours...';
     notification.classList.remove('hidden');
 });
 window.api.receiveOnce('update_downloaded', () => {
-    message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+    message.innerText = 'Mise à jour télécharger. L\'installé maintenant (l\'application vas se relancer) ?';
     restartButton.classList.remove('hidden');
     notification.classList.remove('hidden');
 });
+
+window.api.receiveOnce("update_error", (err)=>{
+
+    console.error(err);
+
+})
+
 function closeNotification() {
     notification.classList.add('hidden');
 }
 function restartApp() {
-    window.api.send('restart_app');
+    window.api.sendAsync('restart_app');
 }
 
 function refreshUserList(){

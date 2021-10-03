@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c7b5cd-2a3f-49e1-8d2a-2eac0a78a2a1" name="Default Changelist" comment="update gitignore">
-      <change beforePath="$PROJECT_DIR$/electron-builder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/electron-builder.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script/preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +96,6 @@
       <recent name="G:\Dev\Web\MisterXPanelAppAdmin\Script\model" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -157,7 +152,8 @@
       <workItem from="1633275423252" duration="388000" />
       <workItem from="1633275990840" duration="88000" />
       <workItem from="1633276168262" duration="7000" />
-      <workItem from="1633276194921" duration="1454000" />
+      <workItem from="1633276194921" duration="1625000" />
+      <workItem from="1633277874799" duration="2823000" />
     </task>
     <task id="LOCAL-00001" summary="update gitignore">
       <created>1633277614463</created>
@@ -166,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633277614463</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update gitignore">
+      <created>1633277660617</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633277660617</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +185,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update gitignore" />
@@ -212,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1632319006783" />
-    <state x="552" y="268" key="Vcs.Push.Dialog.v2" timestamp="1633277618207">
+    <state x="552" y="268" key="Vcs.Push.Dialog.v2" timestamp="1633277664291">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1633277618207" />
+    <state x="552" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1633277664291" />
     <state x="668" y="257" width="583" height="624" key="find.popup" timestamp="1632673900459">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

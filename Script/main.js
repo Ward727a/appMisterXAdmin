@@ -18,6 +18,16 @@ let keyWindow;
 
 let botStatus = null
 
+autoUpdater.on('error', (err)=>{
+    mainWindows.webContents.send('update_error', err);
+})
+
+autoUpdater.on('update-available', () => {
+    mainWindows.webContents.send('update_available');
+});
+autoUpdater.on('update-downloaded', () => {
+    mainWindows.webContents.send('update_downloaded');
+});
 
 function getCacheKey(){
 
@@ -123,6 +133,11 @@ function createWindow(){
     })
 
     mainWindows.loadFile('index.html');
+
+    mainWindows.once("ready-to-show", ()=>{
+        autoUpdater.checkForUpdatesAndNotify();
+    })
+
 }
 
 app.whenReady().then(() => {
@@ -134,21 +149,11 @@ app.whenReady().then(() => {
 
     verifyKey(getCacheKey(), true, false);
 
-    mainWindows.once("ready-to-show", ()=>{
-        autoUpdater.checkForUpdatesAndNotify();
-    })
 
 })
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
 })
-
-autoUpdater.on('update-available', () => {
-    mainWindow.webContents.send('update_available');
-});
-autoUpdater.on('update-downloaded', () => {
-    mainWindow.webContents.send('update_downloaded');
-});
 ipcMain.on('buttonNewAccount', async function (ipc, data, options) {
 
     const req = https.request(options, res=>{
@@ -1043,7 +1048,8 @@ ipcMain.on('stopQuiz', (ipc, uid)=>{
 })
 
 ipcMain.on('app_version', (event) => {
-    event.sender.send('app_version', { version: app.getVersion() });
+    console.log(app.getVersion());
+    mainWindows.webContents.send('app_version', app.getVersion());
 });
 
 ipcMain.on('restart_app', () => {
