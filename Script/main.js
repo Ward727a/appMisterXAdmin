@@ -133,21 +133,22 @@ app.whenReady().then(() => {
     })
 
     verifyKey(getCacheKey(), true, false);
+
+    mainWindows.once("ready-to-show", ()=>{
+        autoUpdater.checkForUpdatesAndNotify();
+    })
+
 })
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
 })
 
-mainWindows.once("ready-to-show", ()=>{
-    autoUpdater.checkForUpdatesAndNotify();
-})
 autoUpdater.on('update-available', () => {
     mainWindow.webContents.send('update_available');
 });
 autoUpdater.on('update-downloaded', () => {
     mainWindow.webContents.send('update_downloaded');
 });
-
 ipcMain.on('buttonNewAccount', async function (ipc, data, options) {
 
     const req = https.request(options, res=>{

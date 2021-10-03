@@ -1,6 +1,6 @@
 {
   "name": "misterx-panel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logiciel de gestion du bot MisterX",
   "main": "Script/main.js",
   "author": "VEREECQUE Malywan",
