@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c7b5cd-2a3f-49e1-8d2a-2eac0a78a2a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Script/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="18c7b5cd-2a3f-49e1-8d2a-2eac0a78a2a1" name="Default Changelist" comment="update gitignore">
+      <change beforePath="$PROJECT_DIR$/electron-builder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/electron-builder.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,8 +157,16 @@
       <workItem from="1633275423252" duration="388000" />
       <workItem from="1633275990840" duration="88000" />
       <workItem from="1633276168262" duration="7000" />
-      <workItem from="1633276194921" duration="1374000" />
+      <workItem from="1633276194921" duration="1454000" />
     </task>
+    <task id="LOCAL-00001" summary="update gitignore">
+      <created>1633277614463</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633277614463</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +183,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="586" y="218" key="#Inspections" timestamp="1632326826463">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -187,6 +196,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="440" y="114" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1631559340459" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1633277654309">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1633277654309" />
     <state x="627" y="317" width="666" height="659" key="EditFileWatcherDialog" timestamp="1632319005237">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -199,6 +212,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="184" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1632319006783" />
+    <state x="552" y="268" key="Vcs.Push.Dialog.v2" timestamp="1633277618207">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1633277618207" />
     <state x="668" y="257" width="583" height="624" key="find.popup" timestamp="1632673900459">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
