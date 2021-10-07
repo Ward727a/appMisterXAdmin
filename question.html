@@ -8,20 +8,14 @@
     <link rel="stylesheet" href="style/menu.css">
     <link rel="stylesheet" href="style/modal.css">
 
-    <script>
-        delete window.require;
-        delete window.exports;
-        delete window.module;
-    </script>
     <script src="Script/ckeditor.js"></script>
     <link rel="stylesheet" href="style/customCKEDITOR.css">
-
-    <script type="text/javascript" src="Script/require.js"></script>
 
     <script src="style/fontawesome/js/all.min.js" crossorigin="anonymous"></script>
 
     <script src="Script/general.js" crossorigin="anonymous"></script>
 
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -52,7 +46,38 @@
 
             </div>
             <div class="rowSpace"></div>
-            <div id="questionInput" class="notInStyle" contenteditable="true">
+            <div id="questionSwitcherContainer">
+
+                <div id="questionSwitcherMenu">
+
+                    <p>
+                        Types de question :
+                    </p>
+                    <div class="rowSpace"></div>
+                    <div class="row" id="questionButtonList">
+
+                        <button onclick="changeModeQuestion(0)">Textuel</button>
+                        <div class="rowSpace"></div>
+                        <button onclick="changeModeQuestion(1)">Comparaison d'image</button>
+
+                    </div>
+
+                </div>
+                <div class="rowSpace"></div>
+                <div id="questionSwitcherBody">
+
+                    <div>
+                        <div id="questionInput" class="notInStyle" contenteditable="true"></div>
+                    </div>
+
+                    <div class="hidden">
+                        <p>Mettez l'image à utilisez pour la comparaison ici :</p>
+                        <input type="file" id="imageComparaison dropArea"/>
+                        <label for="imageTextDesc">Vous pouvez mettre une description afin d'aider le joueur à comprendre ce qu'il faut faire :</label>
+                        <input type="text" id="imageTextDesc">
+                        <input type="hidden" id="imageID">
+                    </div>
+                </div>
             </div>
             <div class="rowSpace"></div>
             <div class="row">
@@ -171,5 +196,42 @@
 <div include-html="include/statusBot.html"></div>
 <script src="Script/bot.js"></script>
 
+<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+<script>
+    // Get a reference to the file input element
+    const inputElement = document.querySelector('input[type="file"]');
+
+    // Create a FilePond instance
+    const pond = FilePond.create(inputElement, {
+        labelIdle: 'Glisser votre fichier ici ou <span class="filepond--label-action"> Chercher le sur votre pc </span>'
+    });
+
+    let imageID = "";
+
+    FilePond.setOptions({
+        server: {
+            url: 'https://misterx-94495.herokuapp.com',
+            timeout: 7000,
+            process: {
+                url: '/process',
+                method: 'POST',
+                withCredentials: false,
+                onload: (response) => {
+                    imageID = JSON.parse(response).data.url;
+                    document.getElementById("imageID").value = imageID;
+                },
+                onerror: (response) => response.data,
+                ondata: (formData) => {
+                    formData.append('Hello', 'World');
+                    return formData;
+                },
+            },
+            revert: './revert',
+            restore: './restore/',
+            load: './load/',
+            fetch: './fetch/',
+        },
+    });
+</script>
 </body>
 </html>

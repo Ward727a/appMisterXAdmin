@@ -9,6 +9,7 @@
 }
 */
 
+let mode = 0;
 let questionArray = [];
 let quizArray = [];
 
@@ -189,7 +190,7 @@ async function listQuestion(){
 
             shortcut.addEventListener("click", ()=>{
 
-                deleteQuesiton(question.uid)
+                deleteQuestion(question.uid)
 
             })
             box.style.marginLeft = "-20vw";
@@ -237,21 +238,38 @@ async function createQuestion(){
     const editorInstance = await domEditable.ckeditorInstance;
 
     let questionTitle = document.getElementById("questionTitleInput").value;
-    let question = await editorInstance.getData();
     let questionResponse = document.getElementById("questionResponseInput").value;
     let questionCounter = document.getElementById("questionCounterInput").value;
     let questionQuiz = document.getElementById("quizSelector").value;
 
-    if(questionTitle !== "" && question !== "" && questionResponse !== "" && questionCounter !== "" && questionQuiz !== ""){
+    if(questionTitle !== "" && questionResponse !== "" && questionCounter !== "" && questionQuiz !== ""){
 
         showLoadingScreen("Création de la question, veuillez patienter...");
 
+
         let data = {
-            title: questionTitle,
-            name: question,
-            response: questionResponse,
-            falseResponse: questionCounter,
-            uidQuiz: questionQuiz
+            questions: {
+                title: questionTitle,
+                mode: mode,
+                response: questionResponse,
+                falseResponse: questionCounter,
+                uidQuiz: questionQuiz
+            }
+        }
+        switch (mode){
+            case 0:{
+                data.questions.question = await editorInstance.getData();
+                break;
+            }
+            case 1:
+            {
+                data.questions.image = document.getElementById("imageID").value;
+                data.questions.question = document.getElementById("imageTextDesc").value;
+                break;
+            }
+            default:
+                data.questions.question = "aucune question"
+                break;
         }
 
         let order = 0;
@@ -264,7 +282,7 @@ async function createQuestion(){
 
         })
 
-        data.order = order;
+        data.questions.order = order;
 
         window.api.sendAsync("createQuestion", data);
 
@@ -324,7 +342,21 @@ setupDelete();
 listQuiz(listQuestion());
 
 
-function deleteQuesiton(uid){
+function changeModeQuestion(newMode){
+
+    let listMode = document.getElementById("questionSwitcherBody").children;
+
+    for (let i = 0; i < listMode.length; i++){
+        listMode[i].style.display = "none";
+
+        if(i === newMode){
+            listMode[i].style.display = "inherit";
+        }
+    }
+    mode = newMode;
+
+}
+function deleteQuestion(uid){
 
     window.api.sendAsync("deleteQuestion", uid);
 
@@ -335,3 +367,4 @@ function deleteQuesiton(uid){
     })
 
 }
+

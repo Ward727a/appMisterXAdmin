@@ -21,9 +21,9 @@ function readFile(){
 // the ipcRenderer without exposing the entire object
 
 let validChannelsSend = ["toMain","buttonNewAccount", "askAdminCode", "CheckKey", "changePage", "getAllUsers", "resetPassword", "editUser", "deleteAccount", "stateAccount", "getAllQuiz", "createQuiz", "editQuiz", "removeQuiz", "stateQuiz", "getQuiz", "getAllQuestion","getAllQuestionFrom", "createQuestion", "editQuestion", "deleteQuestion", "askStatusBot", "setupQuiz", "stopQuiz",
-    "app_version", "restart_app"];
+    "app_version", "restart_app", "uploadImage"];
 let validChannelsReceive = ["fromMain","createdAccount", "userListResponse", "resetPasswordResponse", "editUserResponse", "removeAccountResponse", "stateAccountResponse", "getAllQuizResponse", "createQuizResponse", "editQuizResponse", "removeQuizResponse", "stateQuizResponse", "getQuizResponse", "getAllQuestionResponse","getAllQuestionFromResponse", "createQuestionResponse", "editQuestionResponse", "deleteQuestionResponse", "statusBot", "quizSetup", "quizStop",
-    "app_version", "update_downloaded", "update_available", "update_error"];
+    "app_version", "update_downloaded", "update_available", "update_error", "uploadImageResult"];
 
 contextBridge.exposeInMainWorld(
     "api", {

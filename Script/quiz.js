@@ -43,7 +43,7 @@ function refreshQuiz(){
 
             uploadButton.addEventListener("click", function (ev){
 
-                if(uploadButton.childNodes.item(0).style.display === "inherit") {
+                if(uploadButton.className === "valid setupButton") {
                     upload(uploadButton, elem.uid);
                 } else {
                     remove(uploadButton, elem.uid);

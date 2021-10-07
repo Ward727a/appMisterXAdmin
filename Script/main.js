@@ -1,5 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { autoUpdater } = require('electron-updater');
+
+const fs = require('fs');
+
+
 const Store = require('electron-store');
 const store = new Store();
 
@@ -833,9 +837,8 @@ ipcMain.on("createQuestion", function (ipc, data){
 
     const req = https.request(options);
 
-    data.UIDAuthor = adminKey;
-
-    console.table(data);
+    data.key = adminKey;
+    data.questions.author = adminKey;
 
     data = JSON.stringify(data);
 
@@ -1055,3 +1058,12 @@ ipcMain.on('app_version', (event) => {
 ipcMain.on('restart_app', () => {
     autoUpdater.quitAndInstall();
 });
+
+ipcMain.on('uploadImage', (ipc, image)=>{
+
+    console.log("uploadImage");
+
+    fs.readFile(image, (err, data)=>{
+    })
+
+})

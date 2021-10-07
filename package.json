@@ -6,8 +6,8 @@
   "author": "VEREECQUE Malywan",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Ward727a/appMisterXAdmin.git"
+    "type": "git",
+    "url": "https://github.com/Ward727a/appMisterXAdmin.git"
   },
   "devDependencies": {
     "electron": "^14.0.0",
@@ -24,9 +24,11 @@
     "appId": "misterx.app"
   },
   "dependencies": {
+    "cloudinary": "^1.27.0",
     "electron-store": "^8.0.1",
     "electron-updater": "^4.3.9",
     "socket.io-client": "^4.2.0",
-    "tippy.js": "^6.3.2"
+    "tippy.js": "^6.3.2",
+    "uuidv4": "^6.2.12"
   }
 }
